@@ -1,0 +1,12 @@
+irvyne_zurb_foundation:
+    resource: "@IrvyneZurbFoundationBundle/Resources/config/routing.yml"
+    prefix:   /
+
+irvyne_admin:
+    resource: "@IrvyneAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+irvyne_blog:
+    resource: "@IrvyneBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+

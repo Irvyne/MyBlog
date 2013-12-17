@@ -1,0 +1,34 @@
+article:
+    pattern:  /
+    defaults: { _controller: "IrvyneBlogBundle:Article:index" }
+    methods: [get]
+
+article_new:
+    pattern:  /new
+    defaults: { _controller: "IrvyneBlogBundle:Article:new" }
+    methods: [get]
+
+article_create:
+    pattern:  /create
+    defaults: { _controller: "IrvyneBlogBundle:Article:create" }
+    methods: [post]
+
+article_show:
+    pattern:  /{slug}
+    defaults: { _controller: "IrvyneBlogBundle:Article:show" }
+    methods: [get]
+
+article_edit:
+    pattern:  /{slug}/edit
+    defaults: { _controller: "IrvyneBlogBundle:Article:edit" }
+    methods: [get]
+
+article_update:
+    pattern:  /{slug}/update
+    defaults: { _controller: "IrvyneBlogBundle:Article:update" }
+    methods: [post, put]
+
+article_delete:
+    pattern:  /{slug}/delete
+    defaults: { _controller: "IrvyneBlogBundle:Article:delete" }
+    methods: [post, delete]

@@ -1,0 +1,15 @@
+parameters:
+    irvyne_blog.menu_builder.class: Irvyne\BlogBundle\Menu\MenuBuilder
+
+services:
+    irvyne_blog.menu_builder:
+        class: %irvyne_blog.menu_builder.class%
+        arguments: ["@knp_menu.factory"]
+    irvyne_blog.menu.main:
+        class: Knp\Menu\MenuItem # the service definition requires setting the class
+        factory_service: irvyne_blog.menu_builder
+        factory_method: createMainMenu
+        arguments: ["@request"]
+        scope: request # needed as we have the request as a dependency here
+        tags:
+            - { name: knp_menu.menu, alias: main } # The alias is what is used to retrieve the menu

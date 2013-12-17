@@ -1,0 +1,43 @@
+{% extends '::base-foundation.html.twig' %}
+
+{% block body -%}
+    <h1>Category list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Slug</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for category in categories %}
+            <tr>
+                <td><a href="{{ path('category_show', { 'slug': category.id }) }}">{{ category.slug }}</a></td>
+                <td>{{ category.name }}</td>
+                <td>{{ category.slug }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('category_show', { 'slug': category.slug }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('category_edit', { 'slug': category.slug }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('category_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+{% endblock body %}

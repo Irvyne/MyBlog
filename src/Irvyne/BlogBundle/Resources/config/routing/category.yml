@@ -1,0 +1,34 @@
+category:
+    pattern:  /
+    defaults: { _controller: "IrvyneBlogBundle:Category:index" }
+    methods: [get]
+
+category_new:
+    pattern:  /new
+    defaults: { _controller: "IrvyneBlogBundle:Category:new" }
+    methods: [get]
+
+category_create:
+    pattern:  /create
+    defaults: { _controller: "IrvyneBlogBundle:Category:create" }
+    methods: [post]
+
+category_show:
+    pattern:  /{slug}
+    defaults: { _controller: "IrvyneBlogBundle:Category:show" }
+    methods: [get]
+
+category_edit:
+    pattern:  /{slug}/edit
+    defaults: { _controller: "IrvyneBlogBundle:Category:edit" }
+    methods: [get]
+
+category_update:
+    pattern:  /{slug}/update
+    defaults: { _controller: "IrvyneBlogBundle:Category:update" }
+    methods: [post, put]
+
+category_delete:
+    pattern:  /{slug}/delete
+    defaults: { _controller: "IrvyneBlogBundle:Category:delete" }
+    methods: [post, delete]

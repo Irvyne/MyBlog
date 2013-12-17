@@ -1,0 +1,7 @@
+parameters:
+#    irvyne_zurb_foundation.example.class: Irvyne\ZurbFoundationBundle\Example
+
+services:
+#    irvyne_zurb_foundation.example:
+#        class: %irvyne_zurb_foundation.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

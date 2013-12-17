@@ -1,0 +1,34 @@
+tag:
+    pattern:  /
+    defaults: { _controller: "IrvyneBlogBundle:Tag:index" }
+    methods: [get]
+
+tag_new:
+    pattern:  /new
+    defaults: { _controller: "IrvyneBlogBundle:Tag:new" }
+    methods: [get]
+
+tag_create:
+    pattern:  /create
+    defaults: { _controller: "IrvyneBlogBundle:Tag:create" }
+    methods: [post]
+
+tag_show:
+    pattern:  /{slug}
+    defaults: { _controller: "IrvyneBlogBundle:Tag:show" }
+    methods: [get]
+
+tag_edit:
+    pattern:  /{slug}/edit
+    defaults: { _controller: "IrvyneBlogBundle:Tag:edit" }
+    methods: [get]
+
+tag_update:
+    pattern:  /{slug}/update
+    defaults: { _controller: "IrvyneBlogBundle:Tag:update" }
+    methods: [post, put]
+
+tag_delete:
+    pattern:  /{slug}/delete
+    defaults: { _controller: "IrvyneBlogBundle:Tag:delete" }
+    methods: [post, delete]

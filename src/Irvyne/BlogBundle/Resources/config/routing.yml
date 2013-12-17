@@ -1,0 +1,15 @@
+IrvyneBlogBundle_article:
+        resource: "@IrvyneBlogBundle/Resources/config/routing/article.yml"
+        prefix:   /article
+
+IrvyneBlogBundle_category:
+        resource: "@IrvyneBlogBundle/Resources/config/routing/category.yml"
+        prefix:   /category
+
+IrvyneBlogBundle_tag:
+        resource: "@IrvyneBlogBundle/Resources/config/routing/tag.yml"
+        prefix:   /tag
+
+irvyne_blog_homepage:
+    pattern:  /
+    defaults: { _controller: IrvyneBlogBundle:Default:index }
